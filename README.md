@@ -12,7 +12,7 @@ Provide these clear steps in the `README.md` file of your Git repository so the 
 #### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/unisys-salesforce-case-study.git
+git clone https://github.com/kamranhaneef/unisys-salesforce-case-study.git
 cd unisys-salesforce-case-study
 
 ```
