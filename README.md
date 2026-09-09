@@ -1,7 +1,5 @@
 Repository Setup & Deployment Instructions for Reviewers
 
-Provide these clear steps in the `README.md` file of your Git repository so the reviewers can easily import and verify the solution in their Developer Org or Scratch Org.
-
 ### Step-by-Step SFDX Deployment Instructions
 
 #### Prerequisites
