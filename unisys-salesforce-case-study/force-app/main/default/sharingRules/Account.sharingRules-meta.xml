@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!-- Share Accounts within Equipo Norte -->
+    <sharingOwnerRules>
+        <fullName>Share_Accounts_Equipo_Norte</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountAccessLevel>Edit</accountAccessLevel>
+        <opportunityAccessLevel>None</opportunityAccessLevel>
+        <caseAccessLevel>None</caseAccessLevel>
+        <label>Share Accounts Equipo Norte</label>
+        <sharedTo>
+            <group>Equipo_Norte</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Equipo_Norte</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+
+    <!-- Share Accounts within Equipo Sur -->
+    <sharingOwnerRules>
+        <fullName>Share_Accounts_Equipo_Sur</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountAccessLevel>Edit</accountAccessLevel>
+        <opportunityAccessLevel>None</opportunityAccessLevel>
+        <caseAccessLevel>None</caseAccessLevel>
+        <label>Share Accounts Equipo Sur</label>
+        <sharedTo>
+            <group>Equipo_Sur</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Equipo_Sur</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

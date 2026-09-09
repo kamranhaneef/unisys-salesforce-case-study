@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Buscador de Servicios" icon-name="standard:search">
+        <div class="slds-m-around_medium">
+            <div class="slds-grid slds-gutters slds-m-bottom_medium">
+                <div class="slds-col">
+                    <lightning-input label="Nombre Cliente" value={clientName} onchange={handleClientChange}></lightning-input>
+                </div>
+                <div class="slds-col">
+                    <lightning-input label="Nombre Servicio" value={serviceName} onchange={handleServiceChange}></lightning-input>
+                </div>
+            </div>
+            <lightning-button label="Buscar" variant="brand" onclick={handleSearch}></lightning-button>
+            
+            <div class="slds-m-top_medium">
+                <lightning-datatable
+                    key-field="id"
+                    data={services}
+                    columns={columns}
+                    hide-checkbox-column>
+                </lightning-datatable>
+            </div>
+        </div>
+    </lightning-card>
+</template>

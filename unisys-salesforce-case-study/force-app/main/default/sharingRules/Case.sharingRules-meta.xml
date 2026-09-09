@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!-- Owner-Based Sharing Rule for Equipo Norte -->
+    <sharingOwnerRules>
+        <fullName>Share_Cases_Equipo_Norte</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases Equipo Norte</label>
+        <sharedTo>
+            <group>Equipo_Norte</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Equipo_Norte</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+
+    <!-- Owner-Based Sharing Rule for Equipo Sur -->
+    <sharingOwnerRules>
+        <fullName>Share_Cases_Equipo_Sur</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Cases Equipo Sur</label>
+        <sharedTo>
+            <group>Equipo_Sur</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Equipo_Sur</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!-- Share Services within Equipo Norte -->
+    <sharingOwnerRules>
+        <fullName>Share_Services_Equipo_Norte</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Services Equipo Norte</label>
+        <sharedTo>
+            <group>Equipo_Norte</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Equipo_Norte</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+
+    <!-- Share Services within Equipo Sur -->
+    <sharingOwnerRules>
+        <fullName>Share_Services_Equipo_Sur</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Services Equipo Sur</label>
+        <sharedTo>
+            <group>Equipo_Sur</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Equipo_Sur</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>
