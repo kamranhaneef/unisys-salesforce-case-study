@@ -14,13 +14,13 @@ public with sharing class ServicioTriggerHandler {
         for (Servicio__c s : newServices) {
             Account parentAcc = accountMap.get(s.Cliente__c);
 
-            // Validation: Cannot create special service if client is inactive
+            // 1. Only enforce activation check on SPECIAL services
             if (s.Type__c == 'Especial' && (parentAcc == null || !parentAcc.Active__c)) {
                 s.addError('No se pueden crear servicios especiales para clientes inactivos.');
             }
 
-            // Lock Generic Services against edits
-            if (Trigger.isUpdate && oldMap.containsKey(s.Id)) {
+            // 2. Lock Generic Services against manual updates
+            if (Trigger.isUpdate && oldMap != null && oldMap.containsKey(s.Id)) {
                 Servicio__c oldService = oldMap.get(s.Id);
                 if (oldService.Type__c == 'Generico') {
                     s.addError('Los servicios genéricos no se pueden editar.');

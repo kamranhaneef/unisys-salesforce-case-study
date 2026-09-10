@@ -3,9 +3,12 @@ public with sharing class AccountTriggerHandler {
         List<Servicio__c> servicesToInsert = new List<Servicio__c>();
         
         for (Account acc : newAccounts) {
-            Account oldAcc = oldMap.get(acc.Id);
-            // Auto-create standard services when Account is activated
-            if (acc.Active__c && !oldAcc.Active__c) {
+            Account oldAcc = oldMap != null ? oldMap.get(acc.Id) : null;
+            
+            Boolean wasInactive = (oldAcc == null || oldAcc.Active__c == false);
+            Boolean isNowActive = (acc.Active__c == true);
+
+            if (isNowActive && wasInactive) {
                 servicesToInsert.add(createGenericService(acc.Id, 'Limpieza', 1000));
                 servicesToInsert.add(createGenericService(acc.Id, 'Mantenimiento', 800));
                 servicesToInsert.add(createGenericService(acc.Id, 'Seguridad', 1500));
