@@ -1,19 +1,39 @@
 <template>
-    <lightning-card title="Buscador de Servicios" icon-name="standard:search">
-        <div class="slds-m-around_medium">
-            <div class="slds-grid slds-gutters slds-m-bottom_medium">
-                <div class="slds-col">
-                    <lightning-input label="Nombre Cliente" value={clientName} onchange={handleClientChange}></lightning-input>
+    <lightning-card title="Buscador de Servicios" icon-name="utility:search">
+        <div class="slds-var-p-around_medium slds-is-relative">
+            
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Cargando..." size="medium"></lightning-spinner>
+            </template>
+
+            <div class="slds-grid slds-gutters slds-var-m-bottom_small">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input 
+                        label="Nombre Cliente" 
+                        value={clientName} 
+                        onchange={handleClientChange}>
+                    </lightning-input>
                 </div>
-                <div class="slds-col">
-                    <lightning-input label="Nombre Servicio" value={serviceName} onchange={handleServiceChange}></lightning-input>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input 
+                        label="Nombre Servicio" 
+                        value={serviceName} 
+                        onchange={handleServiceChange}>
+                    </lightning-input>
                 </div>
             </div>
-            <lightning-button label="Buscar" variant="brand" onclick={handleSearch}></lightning-button>
             
-            <div class="slds-m-top_medium">
+            <lightning-button 
+                label="Buscar" 
+                variant="brand" 
+                onclick={handleSearch} 
+                disabled={isLoading}
+                class="slds-var-m-bottom_medium">
+            </lightning-button>
+
+            <div class="slds-var-m-top_medium">
                 <lightning-datatable
-                    key-field="id"
+                    key-field="serviceId"
                     data={services}
                     columns={columns}
                     hide-checkbox-column>
